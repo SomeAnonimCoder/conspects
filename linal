@@ -1,0 +1,64 @@
+\documentclass{article}
+
+
+%Для мобилок
+%\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm, paperwidth=150mm, paperheight=200mm]{geometry}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\pgfplotsset{major grid style={dashed,black}}
+\pgfplotsset{minor grid style={solid,black}}
+\usepackage{float}
+%\usepackage{sidecap}
+%\usepackage{csquotes} % ещё одна штука для цитат
+\newtheorem{theorem}{Определение} % чтобы заработало окружение теорем
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\newcommand{\rom}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+\usepackage{graphicx}
+\title{Линейная Алгебра}
+\author{Панов Петр Алексеевич}
+\begin{document}
+\maketitle
+ 
+\tableofcontents
+
+\section*{Структура курса}
+\begin{itemize}
+\item 3-4 модуль 1 курса
+\begin{itemize}
+\item КР - начало 4 модуля(0.3)
+\item Экзамен - конец 4 модуля(0.5)
+\item Текущая успеваемость - квизы, самостоятельные и т.д (0.2)
+Можно компенсировать это выходом к доске, если проспал или плохо написал. Как работает разбалловка внутри этого пункта - одному Панову известно. Скорее всего, число СР+2=100%.
+\end{itemize}
+
+\item 1-2 модуль 2 курса
+\begin{itemize}
+\item КР - начало 2 модуля(0.3)
+\item Экзамен - конец 2 модуля(0.5)
+\item Текущая успеваемость - квизы, самостоятельные и т.д (0.2)
+\end{itemize}
+\item итоговая оценка - среднее арифметическое итогов 1 курса и 2 курса.
+\end{itemize}
+
+Блоков нет, все можно "переписать", если по уважительной причине прогулял - перед сессией.С неуважительными причинами - нельзя.
+
+Материалы - в ЛМС.
+
+\section*{Книги}
+\begin{itemize}
+\item Бурмистрова Лобанов - 1 часть
+\item Хованская ирина Аскольдовна - курс на Курсере
+\item
+\end{itemize}
+
+\end{docment}
