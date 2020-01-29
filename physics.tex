@@ -11,6 +11,7 @@
 
 
 
+
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
@@ -18,6 +19,8 @@
 \usepackage{amsmath}
 
 \usepackage{graphicx}
+
+\usepackage{wasysym}
 \begin{document}
  
 \tableofcontents
@@ -820,6 +823,78 @@ $P(V)$ - гипербола для идельного  газа, для реал
 \section{Правило рычага или Максвелловская конструкция}
 
 Для области сосуществования фаз, существует такое правило. Пусть одной фазы $x$, другой $1-x$. Тогда $V = xV_g + (1-x)V_l$, $x = \frac{V-V_l}{V_g-V_l}, (1-x) = \frac{V_g-V}{V_g-V_l}$
+
+\section{Электричество}
+\begin{itemize}
+\item Статика
+\item Динамика гармонических вещей
+\item Динамика - общий случай
+\end{itemize}
+
+\subsection{Матаппарат}
+
+\subsubsection{Градиент}
+
+Пусть есть $\varphi(\vec r)$ - скалярное поле. Тогда $$grad(\varphi) = \nabla \varphi = \frac{d\varphi}{dx}\vec i + \frac{d\varphi}{dy}\vec j +\frac{d\varphi}{dz}\vec k = \frac{d\varphi}{dx_{\alpha}}\vec e_{alpha}$$
+
+Градиент - линеен, то есть $\nabla(\varphi + \psi) = \nabla \varphi + \nabla \psi$. А вот $\nabla (\varphi\psi) = (\nabla \varphi)\psi + (\nabla \psi)\varphi$
+
+Градиент - направление наиболее быстрого роста функции. 
+
+\subsubsection{Дивергенция aka Расходимость}
+Пусть $\vec \varphi(\vec r)$. Тогда
+$$div (\vec \varphi) = \nabla\cdot\varphi = \frac{\partial \varphi_{\alpha}}{\partial x_{\alpha}}$$
+
+Перемножение -скалярное!
+
+Показывает истоки и стоки поля. Есди дивергенция равна нулю, то вошло столько же сколько и вышло. Иначе - есть источник поля.
+
+\subsubsection{Ротор}
+$$rot \psi(r) = curl \psi(r) = \nabla\times\psi = \begin{vmatrix}
+	i & j & k\\
+	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+	\psi_x & \psi_y & \psi_z\\
+\end{vmatrix}
+$$
+
+Перемножение - векторное!
+
+\subsubsection{Лаплассиан aka оператор Лапласса}
+Возведение в квадрат или последовательно применение дважды оператора Набла.
+$$\Delta = \nabla\cdot\nabla = \frac{d^2}{d^2x}+ \frac{d^2}{d^2y} +\frac{d^2}{d^2z} $$
+
+\subsubsection{Поток}
+
+Пусть $\vec \phi(\vec r)$ - векторное поле.
+ 
+ $$\Phi = \oiint_{\vec S}\vec \phi(\vec r)d\vec S$$
+
+\subsubsection{Циркуляция}
+
+Контур $R$, векторное поле $\vec \psi(\vec r)$. Интеграл по периметру, по сути.
+
+$$\oint_{R} \vec \psi(\vec r)d\vec{l}$$
+
+$$d\vec{l} = dl\tau$$
+
+\section{Теорема Гаусса-Остроградского}
+
+$$\oiint_{\vec S_v}\vec \varphi d\vec S = \iiint \vec \nabla \vec \varphi dV$$
+
+\section{Теорема Стокса}
+
+$$\oint_{Z_S} \vec\varphi d\vec l = \iint rot \vec\varphi dS$$
+
+\section{Криволинейные координаты}
+Сферическая система - $(\varphi,\theta, r)$; декартова - $(x,y,z)$; циллиндрическая - $(\varphi, \rho, z)$.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=.600]{coords.png}
+\end{figure}
+
+$$\vec \nabla \varphi = \frac{\partial \varphi}{\partial r}\vec e_r$$
+
+$$\vec \nabla \vec \varphi = \frac1{r^2}\frac{\partial}{\partial r}(r^2\varphi(r))$$
 
 
 \end{document}
