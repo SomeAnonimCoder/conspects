@@ -389,6 +389,112 @@ $x =  \begin{pmatrix}
 	1 & 2\\
 \end{pmatrix}$
 
+\subsection*{Перестановочные матрицы}
+Если переставить столбцы в единичной матрице и умножить на нее, это приведет к перестановке столбцов данной матрицы или строк при умножении соответственно справа или слева:
+$$\begin{pmatrix}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	a_{31} & a_{32} & a_{33}\\
+\end{pmatrix}\times
+\begin{pmatrix}
+	1 & 0 & 0\\
+	0 & 0 & 1\\
+	0 & 1 & 0\\
+\end{pmatrix} = 
+\begin{pmatrix}
+    a_{11} & a_{13} & a_{12}\\
+	a_{21} & a_{23} & a_{22}\\
+	a_{31} & a_{33} & a_{32}\\
+\end{pmatrix}
+$$
+
+$$\begin{pmatrix}
+	1 & 0 & 0\\
+	0 & 0 & 1\\
+	0 & 1 & 0\\
+\end{pmatrix}\times\begin{pmatrix}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	a_{31} & a_{32} & a_{33}\\
+\end{pmatrix} = 
+\begin{pmatrix}
+	a_{11} & a_{12} & a_{13}\\
+	a_{31} & a_{32} & a_{33}\\
+	a_{21} & a_{22} & a_{23}\\
+\end{pmatrix}
+$$
+
+Определитель матрицы 
+$$\begin{pmatrix}
+	a_{0} & \ldots & a_{0}\\
+	\vdots & \ddots & \vdots\\
+	a_{1} & \ldots & a_{0}\\
+\end{pmatrix}_{n\times n}$$
+равен $\frac{n(n+3)}2$
+
+\subsection*{Скалярное произведение}
+\subsubsection*{Пространство $R_n$}
+$$x = \begin{pmatrix}
+	x_{11} & x_{12} & x_{13}\\
+\end{pmatrix}$$
+$$y = \begin{pmatrix}
+	y_{11} & y_{12} & y_{13}\\
+\end{pmatrix}$$
+
+$$x\cdot y  = <x;y> = (x;y) = \sum x_iy_i = x^T\times y$$
+Свойства
+\begin{itemize}
+\item $x\cdot y = y\cdot x$
+\item скалярное произведение линейно $\alpha x\cdot y = \alpha(x\cdot y)$
+\item $(x+y)\cdot z = x\cdot z + y\cdot z$
+\item $x\cdot x \ge 0; x\cdot x = 0 \Leftrightarrow x=0$
+\item $|x| = \sqrt{x\cdot x} \Rightarrow |x|^2 = x\cdot x$
+\item $x\cdot y = |x||y|\cos(\gamma)$
+
+Доказывается так:
+$\vec a = \begin{pmatrix}
+	a\sin\alpha\\
+	a\cos\alpha\\
+\end{pmatrix}$;
+$\vec b = \begin{pmatrix}
+	b\sin\beta\\
+	b\cos\beta\\
+\end{pmatrix}$
+
+$\vec a\cdot \vec b = ab\cos\alpha \cos\beta + ab\sin\alpha\sin\beta = ab(\cos\alpha \cos\beta +\sin\alpha\sin\beta) =ab\cos(\alpha-\beta)$
+
+\item $\cos \gamma = \frac{a\cdot b}{|a||b|}$
+
+\end{itemize}
+
+В параллелограмме $d_1^2 + d_2^2 = 2a^2+2b^2$. Доказывается через расписывание по определению $d_1^2+d_2^2(d_1 = a+b, d_2 = b-a)$.
+
+\subsubsection*{Пространство $C_n$}
+
+Скалярное произведение в $C_n$ по свойствам немного отлично от такового в $R_n$. Например, нарушается правило неотрицательного квадрата. Чтобы этого не было, умножают на сопряженное. Тогда свойства будут:
+
+\begin{itemize}
+\item $x\cdot y = y\cdot x$
+\item скалярное произведение линейно $\alpha x\cdot y = \bar \alpha(x\cdot y)$
+\item $(x+y)\cdot z = x\cdot z + y\cdot z$
+\item $|x| = \sqrt{x\cdot x} \Rightarrow |x|^2 = x\cdot x$
+\item $x\cdot y = |x||y|\cos(\gamma)$
+
+Доказывается так:
+$\vec a = \begin{pmatrix}
+	a\sin\alpha\\
+	a\cos\alpha\\
+\end{pmatrix}$;
+$\vec b = \begin{pmatrix}
+	b\sin\beta\\
+	b\cos\beta\\
+\end{pmatrix}$
+
+$\vec a\cdot \vec b = ab\cos\alpha \cos\beta + ab\sin\alpha\sin\beta = ab(\cos\alpha \cos\beta +\sin\alpha\sin\beta) =ab\cos(\alpha-\beta)$
+
+\item $\cos \gamma = \frac{a\cdot b}{|a||b|}$
+
+\end{itemize}
 
 
 
